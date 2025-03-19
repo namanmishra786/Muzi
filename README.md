@@ -9,11 +9,13 @@
             font-family: Arial, sans-serif;
             margin: 40px;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
             color: #333;
         }
         h1, h2, h3 {
             color: #222;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
         }
         code {
             background-color: #e3e3e3;
@@ -21,20 +23,33 @@
             border-radius: 4px;
         }
         pre {
-            background: #ddd;
+            background: #272822;
+            color: #f8f8f2;
             padding: 10px;
             border-radius: 5px;
+            overflow-x: auto;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 25px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            color: white;
+            background: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #0056b3;
         }
     </style>
 </head>
@@ -46,12 +61,12 @@
         <div class="section">
             <h2>🚀 Features</h2>
             <ul>
-                <li>User Authentication (JWT-based)</li>
-                <li>Create & Join Music Groups</li>
-                <li>Add Songs to Groups</li>
-                <li>Upvote & Downvote Songs</li>
-                <li>Real-time Updates using Polling</li>
-                <li>Embedded YouTube Player for Song Playback</li>
+                <li>✅ User Authentication (JWT-based)</li>
+                <li>✅ Create & Join Music Groups</li>
+                <li>✅ Add Songs to Groups</li>
+                <li>✅ Upvote & Downvote Songs</li>
+                <li>✅ Real-time Updates using Polling</li>
+                <li>✅ Embedded YouTube Player for Song Playback</li>
             </ul>
         </div>
 
@@ -119,17 +134,17 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
         <div class="section">
             <h2>🎮 User Flow</h2>
             <ol>
-                <li>User registers or logs in.</li>
-                <li>They create or join a music group.</li>
-                <li>Users add songs (with YouTube links).</li>
-                <li>Other users vote on songs (upvote/downvote).</li>
-                <li>The most voted song is played via the YouTube Player.</li>
+                <li>🆕 User registers or logs in.</li>
+                <li>🎵 They create or join a music group.</li>
+                <li>🎶 Users add songs (with YouTube links).</li>
+                <li>👍 Other users vote on songs (upvote/downvote).</li>
+                <li>▶️ The most voted song is played via the YouTube Player.</li>
             </ol>
         </div>
 
         <div class="section">
             <h2>🎬 Demo Video</h2>
-            <p>Watch the demo: <a href="https://your-demo-link.com" target="_blank">Demo Link</a></p>
+            <p>Watch the demo: <a href="https://your-demo-link.com" target="_blank" class="btn">Demo Link</a></p>
         </div>
 
         <div class="section">
@@ -139,10 +154,10 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 
         <div class="section">
             <h2>📧 Contact</h2>
-            <p>Email: your-email@example.com</p>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
         </div>
 
-        <p><strong>🚀 Happy Coding & Enjoy Music!</strong> 🎵</p>
+        <p><strong>🚀 Happy Coding & Enjoy Music! 🎵</strong></p>
     </div>
 </body>
 </html>
