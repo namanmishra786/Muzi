@@ -1,119 +1,103 @@
-<title>Muzi - README</title>
-<style>
-body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; background-color: #f8f9fa; color: #333; }
-h1, h2, h3 { color: #222; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
-code { background-color: #e3e3e3; padding: 2px 6px; border-radius: 4px; }
-pre { background: #272822; color: #f8f8f2; padding: 10px; border-radius: 5px; overflow-x: auto; }
-.container { max-width: 900px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-.section { margin-bottom: 30px; }
-.btn { display: inline-block; padding: 10px 15px; color: white; background: #007bff; text-decoration: none; border-radius: 5px; }
-.btn:hover { background: #0056b3; }
-</style>
+<h1 align="center">🎵 Muzi - Music Voting & Collaboration App</h1>
 
-<div class="container">
-    <h1>🎵 Muzi - Music Voting & Collaboration App</h1>
-    <p><strong>Muzi</strong> is a real-time platform where users can create music groups, add songs via YouTube links, vote on them, and enjoy playback—all in a collaborative, social environment.</p>
+<p align="center">
+  Muzi is a real-time <strong>music collaboration platform</strong> where users can <strong>create groups</strong>, 
+  <strong>add songs</strong>, <strong>vote on them</strong>, and <strong>play them using YouTube</strong>.
+</p>
 
-    <div class="section">
-        <h2>🚀 Features</h2>
-        <ul>
-            <li>User Authentication (JWT-based)</li>
-            <li>Create and Join Music Groups</li>
-            <li>Add Songs with YouTube Links</li>
-            <li>Upvote/Downvote Songs</li>
-            <li>Real-time Updates via Polling</li>
-            <li>Embedded YouTube Player for Playback</li>
-        </ul>
-    </div>
+---
 
-    <div class="section">
-        <h2>🛠️ Tech Stack</h2>
-        <ul>
-            <li><strong>Frontend:</strong> React, Vite, React Router, Axios</li>
-            <li><strong>Backend:</strong> Java, Spring Boot, Spring Security, JWT</li>
-            <li><strong>Database:</strong> H2 (Development), MySQL (Production)</li>
-        </ul>
-    </div>
+<h2>🚀 Features</h2>
+<ul>
+  <li>✅ <strong>User Authentication (JWT-based)</strong></li>
+  <li>✅ <strong>Create & Join Music Groups</strong></li>
+  <li>✅ <strong>Add Songs to Groups</strong></li>
+  <li>✅ <strong>Upvote & Downvote Songs</strong></li>
+  <li>✅ <strong>Real-time Updates using Polling</strong></li>
+  <li>✅ <strong>Embedded YouTube Player for Song Playback</strong></li>
+</ul>
 
-    <div class="section">
-        <h2>📌 Installation</h2>
-        <p>Follow these steps to set up Muzi locally.</p>
+---
 
-        <h3>1. Backend (Spring Boot)</h3>
-        <pre>
+<h2>🛠️ Tech Stack</h2>
+<ul>
+  <li><strong>Frontend:</strong> React, Vite, React Router, Axios</li>
+  <li><strong>Backend:</strong> Spring Boot, Java, Spring Security, JWT</li>
+  <li><strong>Database:</strong> H2 (for development), MySQL (for production)</li>
+</ul>
+
+---
+
+<h2>📌 Installation Guide</h2>
+
+<h3>1️⃣ Backend Setup (Spring Boot)</h3>
+<pre>
 # Clone the repository
 git clone https://github.com/your-repo/muzi.git
 cd muzi
 
-# Build and run the backend
+# Build & Run Backend
 mvn clean install
 mvn spring-boot:run
-        </pre>
-        <p>Backend runs on <code>http://localhost:8080</code> by default.</p>
+</pre>
 
-        <h3>2. Frontend (React + Vite)</h3>
-        <pre>
+<h3>2️⃣ Frontend Setup (React + Vite)</h3>
+<pre>
 # Navigate to frontend directory
 cd muzi-frontend
 
 # Install dependencies
 npm install
 
-# Start the development server
+# Start frontend
 npm run dev
-        </pre>
-        <p>Frontend runs on <code>http://localhost:5173</code> (check terminal for exact port).</p>
-    </div>
+</pre>
 
-    <div class="section">
-        <h2>🌐 API Endpoints</h2>
-        <h3>Authentication</h3>
-        <ul>
-            <li><code>POST /api/auth/register</code> - Register a new user</li>
-            <li><code>POST /api/auth/login</code> - Log in and receive JWT token</li>
-        </ul>
-        <h3>Music Groups & Songs</h3>
-        <ul>
-            <li><code>GET /api/groups</code> - List all groups</li>
-            <li><code>POST /api/groups</code> - Create a new group</li>
-            <li><code>POST /api/groups/{groupId}/songs</code> - Add a song to a group</li>
-            <li><code>PUT /api/groups/{groupId}/songs/{songId}/vote</code> - Upvote/downvote a song</li>
-        </ul>
-    </div>
+---
 
-    <div class="section">
-        <h2>🛡️ Authentication</h2>
-        <p>Secure endpoints require a JWT token in the request header:</p>
-        <pre>
-Authorization: Bearer &lt;your-jwt-token&gt;
-        </pre>
-    </div>
+<h2>🌐 API Endpoints</h2>
 
-    <div class="section">
-        <h2>🎮 How It Works</h2>
-        <ol>
-            <li>Register or log in to your account.</li>
-            <li>Create a new music group or join an existing one.</li>
-            <li>Add songs using YouTube links.</li>
-            <li>Vote on songs with upvotes or downvotes.</li>
-            <li>Play the top-voted song via the embedded YouTube player.</li>
-        </ol>
-    </div>
+<h3>Authentication</h3>
+<ul>
+  <li><code>POST /api/auth/register</code> → <strong>Register a new user</strong></li>
+  <li><code>POST /api/auth/login</code> → <strong>Login & get JWT token</strong></li>
+</ul>
 
-    <div class="section">
-        <h2>🎬 Demo</h2>
-        <p>See Muzi in action: <a href="https://your-demo-link.com" target="_blank" class="btn">Watch Demo</a></p>
-    </div>
+<h3>Groups & Songs</h3>
+<ul>
+  <li><code>GET /api/groups</code> → <strong>Fetch all groups</strong></li>
+  <li><code>POST /api/groups</code> → <strong>Create a new group</strong></li>
+  <li><code>POST /api/groups/{groupId}/songs</code> → <strong>Add a song to a group</strong></li>
+  <li><code>PUT /api/groups/{groupId}/songs/{songId}/vote</code> → <strong>Vote on a song</strong></li>
+</ul>
 
-    <div class="section">
-        <h2>🤝 Contributing</h2>
-        <p>Contributions are welcome! Fork the repo, make your changes, and submit a pull request.</p>
-    </div>
+---
 
-    <div class="section">
-        <h2>📧 Contact</h2>
-        <p>For questions or feedback: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    </div>
+<h2>🛡️ Authentication (JWT Token)</h2>
+<p>For protected routes, include the <strong>JWT token</strong> in headers:</p>
+<pre>
+Authorization: Bearer YOUR_ACCESS_TOKEN
+</pre>
 
-    <p><strong>🎵 Code, Collaborate, and Enjoy the Music! 🚀</strong></p>
-</div>
+---
+
+<h2>🎮 User Flow</h2>
+<ol>
+  <li><strong>User registers or logs in.</strong></li>
+  <li><strong>They create or join a music group.</strong></li>
+  <li><strong>Users add songs (with YouTube links).</strong></li>
+  <li><strong>Other users vote on songs (upvote/downvote).</strong></li>
+  <li><strong>The most voted song is played via the YouTube Player.</strong></li>
+</ol>
+
+---
+
+<h2>🤝 Contribute</h2>
+<p>Want to improve Muzi? <strong>Fork the repo, create a PR</strong>, or open an issue!</p>
+
+---
+
+<h2>📧 Contact</h2>
+<p>📩 Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+
+<h3 align="center">🚀 Happy Coding & Enjoy Music! 🎵</h3>
